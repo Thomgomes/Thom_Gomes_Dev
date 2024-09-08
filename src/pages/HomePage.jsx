@@ -3,7 +3,7 @@ import Section from "../containers/Section";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="mx-3">
       <Section id="Início">
         <Header />
       </Section>
@@ -13,6 +13,6 @@ export default function HomePage() {
       <Section id="Projetos">Projetos</Section>
       <Section>Parallax</Section>
       <Section id="Contato">Contato</Section>
-    </>
+    </div>
   );
 }

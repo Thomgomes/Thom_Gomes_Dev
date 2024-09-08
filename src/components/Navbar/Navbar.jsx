@@ -1,26 +1,14 @@
-import { Link } from "react-router-dom";
-import ThemeToggle from "../../ThemeToggle";
+import Links from "../Links/Links";
 import Sidebar from "../Sidebar/Sidebar";
 
 export default function Navbar() {
+
   return (
-    <nav className="flex items-center gap-4">
-      <ul className="flex gap-4">
-        <li>
-          <Link to="/">Início</Link>
-        </li>
-        <li>
-          <Link to="/about">Sobre Mim</Link>
-        </li>
-        <li>
-          <Link to="/contact">Projetos</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contato</Link>
-        </li>
+    <nav className="flex items-center">
+      <ul className="hidden md:flex">
+        <Links divClass="flex gap-4" liClass="text-lg transition duration-300 ease-in-out hover:text-blue-500 p-1 border-b border-transparent hover:border-blue-500" aClass=""/>
       </ul>
-      <ThemeToggle />
-      <Sidebar/>
+      <Sidebar />
     </nav>
   );
 }

@@ -1,0 +1,30 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        Blue1: '#071777',
+        Blue2: '#505de7',
+        Blue2hover: '#7075f3',
+        Preto: "#191a1f",
+        Branco: "#f0f4f8",
+        quasePreto: "#1f222b",
+
+        indigo500: "#6366F1",
+        indigo600: "#4F46E5",
+        cinza600: "#4B5563",
+        cinza500: "#6B7280",
+        
+      }
+    },
+    fontFamily: {
+      Lato: ['Lato', 'sans-serif'],
+    },
+  },
+  plugins: [],
+}

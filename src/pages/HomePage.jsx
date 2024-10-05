@@ -1,18 +1,19 @@
-import Header from "../containers/Header";
-import Section from "../containers/Section";
+import Section from "../components/Sections";
+import AboutSection from "../components/Sections/About";
+import ContactSection from "../components/Sections/Contact";
+import HeroSection from "../components/Sections/Hero";
+import ProjectsSection from "../components/Sections/Projects";
 
 export default function HomePage() {
   return (
     <div className="mx-3">
-      <Section id="Início">
-        <Header />
-      </Section>
+      <HeroSection />
       <Section>Parallax</Section>
-      <Section id="Sobre Mim">Sobre Mim</Section>
+      <ProjectsSection />
       <Section>Parallax</Section>
-      <Section id="Projetos">Projetos</Section>
+      <AboutSection />
       <Section>Parallax</Section>
-      <Section id="Contato">Contato</Section>
+      <ContactSection />
     </div>
   );
 }

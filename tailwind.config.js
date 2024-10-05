@@ -15,6 +15,12 @@ export default {
         Branco: "#f0f4f8",
         quasePreto: "#1f222b",
 
+        Claro_Primario: "#e6eedf",
+        Claro_Secundario: "#ced6d2",
+
+        Escuro_Primario: "#1a1212",
+        Escuro_Secundario: "#1e1515",
+
         indigo500: "#6366F1",
         indigo600: "#4F46E5",
         cinza600: "#4B5563",

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import ThemeToggle from "../../ThemeToggle";
+import ThemeToggle from "../../../ThemeToggle";
 
 export default function Links({
   divClass,
@@ -22,7 +22,7 @@ export default function Links({
   const items = ["Início", "Sobre Mim", "Projetos", "Contato"];
 
   return (
-    <motion.ul className={divClass} variants={ulVariants} >
+    <motion.ul className={divClass} variants={ulVariants}>
       {items.map((item) => (
         <motion.li key={item} className={liClass} variants={liVariants}>
           <motion.a

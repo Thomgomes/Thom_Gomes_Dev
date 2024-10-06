@@ -19,7 +19,7 @@ export default function Links({
     }
   };
 
-  const items = ["Início", "Sobre Mim", "Projetos", "Contato"];
+  const items = ["Início", "Sobre", "Projetos", "Contato"];
 
   return (
     <motion.ul className={divClass} variants={ulVariants}>

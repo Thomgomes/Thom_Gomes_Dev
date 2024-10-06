@@ -20,6 +20,13 @@ export default {
 
         Escuro_Primario: "#1a1212",
         Escuro_Secundario: "#1e1515",
+        
+        Parallax_Primario: "#e25b4c",
+        Parallax_Secundario: "#feddc8",
+
+
+        Parallax_Dark_Primario: "#2d112b",
+        Parallax_Dark_Secundario: "#2c3e50",
 
         indigo500: "#6366F1",
         indigo600: "#4F46E5",

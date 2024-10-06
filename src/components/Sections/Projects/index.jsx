@@ -2,7 +2,7 @@ import Section from "..";
 
 export default function ProjectsSection() {
   return (
-      <Section>
+      <Section id="Projetos">
         Projetos
       </Section>
   );

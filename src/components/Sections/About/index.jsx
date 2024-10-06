@@ -2,7 +2,7 @@ import Section from "..";
 
 export default function AboutSection() {
   return (
-    <Section>
+    <Section id="Sobre">
       Sobre mim
     </Section>
   );

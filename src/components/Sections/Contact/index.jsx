@@ -2,7 +2,7 @@ import Section from "..";
 
 export default function ContactSection() {
   return (
-    <Section>
+    <Section id="Contato">
       Contatos
     </Section>
   );

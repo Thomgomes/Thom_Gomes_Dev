@@ -32,36 +32,37 @@ export default function Header() {
   };
 
   return (
-    <motion.header
-      className="relative z-[10] xl:container xl:mx-auto mx-6"
-      variants={HeaderVariants}
-      initial="inital"
-      animate="animate"
-    >
-      <motion.div
-        className={`w-full fixed top-0 flex justify-between items-center pr-4 transition-colors duration-300 ease-in-out ${navColour ? "bg-" : ""}`}
+    <div className={`z-[10] fixed w-screen transition-all duration-300 ease-in-out ${navColour ? "h-24 dark:bg-Claro_Primario/20 bg-Escuro_Primario/20" : "h-32"}`}>
+      <motion.nav
+        className="relative xl:container mx-auto"
         variants={HeaderVariants}
+        initial="inital"
+        animate="animate"
       >
-        <motion.a
-          href="https://github.com/Thomgomes"
-          target="_blank"
-          className="flex items-center"
+        <motion.div
+          className={`w-full absolute flex justify-between items-center lg:pl-6 lg:pr-12 pr-6 transition-all duration-300 ease-in-out ${
+            navColour ? "pt-2" : "pt-6"
+          }`}
           variants={HeaderVariants}
         >
-          <motion.img
-            src={Thomty}
-            alt="Thomty"
-            className="h-20 w-20border-2"
+          <motion.a
+            href="https://github.com/Thomgomes"
+            target="_blank"
+            className="flex items-center"
             variants={HeaderVariants}
-          />
-          <motion.span className="text-2xl" variants={HeaderVariants}>
-            Thom Dev
-          </motion.span>
-        </motion.a>
-        <motion.div variants={HeaderVariants}>
-          <Navbar />
+          >
+            <motion.img
+              src={Thomty}
+              alt="Thomty"
+              className="h-20 w-20border-2"
+              variants={HeaderVariants}
+            />
+          </motion.a>
+          <motion.div variants={HeaderVariants}>
+            <Navbar />
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </motion.header>
+      </motion.nav>
+    </div>
   );
 }

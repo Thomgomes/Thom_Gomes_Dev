@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
@@ -39,5 +40,7 @@ export default {
       Lato: ['Lato', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

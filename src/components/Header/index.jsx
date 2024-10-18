@@ -1,8 +1,21 @@
 import { motion } from "framer-motion";
 import Thomty from "../../assets/thomty.gif";
 import Navbar from "./Navbar";
+import { useState } from "react";
 
 export default function Header() {
+  const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrollHandler);
+
   const HeaderVariants = {
     inital: {
       y: -200,
@@ -20,13 +33,13 @@ export default function Header() {
 
   return (
     <motion.header
-      className="relative z-[1] xl:container xl:mx-auto mx-6"
+      className="relative z-[10] xl:container xl:mx-auto mx-6"
       variants={HeaderVariants}
       initial="inital"
       animate="animate"
     >
       <motion.div
-        className="w-full absolute top-0 flex justify-between items-center pr-4"
+        className={`w-full fixed top-0 flex justify-between items-center pr-4 transition-colors duration-300 ease-in-out ${navColour ? "bg-" : ""}`}
         variants={HeaderVariants}
       >
         <motion.a

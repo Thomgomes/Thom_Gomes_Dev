@@ -54,8 +54,8 @@ const handleClick = (e, targetId) => {
 export default function HeroSection() {
   return (
     <Section id="Inicio">
-      <div className="relative h-full">
-        <div className="m-auto h-full flex flex-row items-center justify-between xl:container xl:mx-auto mx-6">
+      <div className="relative h-full flex justify-center">
+        <div className="m-auto h-full flex flex-row items-center justify-between xl:container mx-6 pt-6">
           <motion.div
             className="flex flex-col gap-10"
             variants={TextHeroVariants}

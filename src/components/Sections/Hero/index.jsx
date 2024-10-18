@@ -3,6 +3,7 @@ import ThomGif from "../../../assets/ThomGif.gif";
 import { RiScrollToBottomLine } from "react-icons/ri";
 import Button from "../../Buttons/Button";
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const TextHeroVariants = {
   initial: {
@@ -40,6 +41,21 @@ const SliderHeroVariants = {
     },
   },
 };
+const ImgVariants = {
+  initial: {
+    scale: 0.6,
+    opacity: 0,
+    x: 500
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1.3,
+    },
+  },
+};
 
 const handleClick = (e, targetId) => {
   e.preventDefault();
@@ -55,7 +71,7 @@ export default function HeroSection() {
   return (
     <Section id="Inicio">
       <div className="relative h-full flex justify-center">
-        <div className="m-auto h-full flex flex-row items-center justify-between xl:container mx-6 pt-6">
+        <div className="m-auto h-full flex flex-row items-center justify-between container mx-6 pt-6">
           <motion.div
             className="flex flex-col gap-10"
             variants={TextHeroVariants}
@@ -93,15 +109,34 @@ export default function HeroSection() {
                 <Button>Contate-me</Button>
               </motion.a>
             </motion.div>
-            <motion.a href="#Parallax" variants={TextHeroVariants} animate="scrollButtom" onClick={(e) => handleClick(e, "Parallax")}>
+            <motion.a
+              href="#Parallax"
+              variants={TextHeroVariants}
+              animate="scrollButtom"
+              onClick={(e) => handleClick(e, "Parallax")}
+            >
               <RiScrollToBottomLine className="ml-12 text-6xl" />
             </motion.a>
           </motion.div>
-          <img
-            className="rounded-full w-96 lg:w-auto z-[1] border-4 border-quasePreto dark:border-Branco"
-            src={ThomGif}
-            alt=""
-          />
+          <div>
+            <Tilt
+              className="w-80 h-80"
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={15}
+              tiltReverse={true}
+              glareMaxOpacity={false}
+            >
+              <motion.img
+                variants={ImgVariants} // Adicionando os variants
+                initial="initial" // Estado inicial
+                animate="animate" // Estado animado
+                className="rounded-full w-full h-full object-cover border-4 border-quasePreto dark:border-Branco"
+                src={ThomGif}
+                alt="Descrição da imagem de Thom"
+                style={{ opacity: 1 }} // Garantindo opacidade total
+              />
+            </Tilt>
+          </div>
         </div>
         <motion.span
           className="absolute text-[60vh] bottom-[-120px] whitespace-nowrap opacity-10 font-bold w-full pointer-events-none"

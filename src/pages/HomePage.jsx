@@ -1,13 +1,13 @@
 import Header from "../components/Header";
-import AboutSection from "../components/Sections/About";
-import ContactSection from "../components/Sections/Contact";
-import HeroSection from "../components/Sections/Hero";
-import Parallax from "../components/Sections/Skills";
-import ProjectsSection from "../components/Sections/Projects";
+import AboutSection from "../components/About";
+import ContactSection from "../components/Contact";
+import HeroSection from "../components/Hero";
+import Parallax from "../components/Skills";
+import ProjectsSection from "../components/Projects";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
       <HeroSection />
       <Parallax/>

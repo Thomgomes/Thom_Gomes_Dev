@@ -1,7 +1,6 @@
-import Section from "..";
-import ThomGif from "../../../assets/ThomGif.gif";
+import ThomGif from "../../assets/ThomGif.gif";
 import { RiScrollToBottomLine } from "react-icons/ri";
-import Button from "../../Buttons/Button";
+import Button from "../Buttons/Button";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
@@ -69,7 +68,7 @@ const handleClick = (e, targetId) => {
 
 export default function HeroSection() {
   return (
-    <Section id="Inicio">
+    <section className="h-screen" id="Inicio">
       <div className="relative h-full flex justify-center">
         <div className="m-auto h-full flex flex-row items-center justify-between container mx-6 pt-6">
           <motion.div
@@ -149,6 +148,6 @@ export default function HeroSection() {
         </motion.span>
         <div className="w-full absolute h-2 bg-outra_Secundario bottom-0 left-0 rounded-t-lg"></div>
       </div>
-    </Section>
+    </section>
   );
 }

@@ -1,9 +1,9 @@
-import Section from "..";
+
 
 export default function AboutSection() {
   return (
-    <Section id="Sobre">
+    <section id="Sobre">
       Sobre mim
-    </Section>
+    </section>
   );
 }
